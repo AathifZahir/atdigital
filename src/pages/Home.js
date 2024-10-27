@@ -1,27 +1,58 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Services from "../components/Services";
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
-      <div
-        className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/assets/Hero Image.png')` }}
-      >
-        <div className="absolute bottom-10 left-10 bg-gradient-to-l from-[#1CBDDD] to-[#4DCA79] text-white p-6 rounded-lg max-w-xs">
-          <h2 className="text-2xl font-semibold mb-4">Welcome to AT Digital</h2>
-          <p className="mb-4">
-            Discover our services and how we can help your business grow!
-          </p>
-          <a
-            href="/services"
-            className="bg-white text-purple-600 font-bold py-2 px-4 rounded shadow-lg hover:bg-purple-600 hover:text-white transition duration-300"
-          >
-            Learn More
-          </a>
+      <div>
+        <div className="lg:relative lg:h-screen">
+          <img
+            src="/imgs/Hero image.png"
+            alt="AT DIGITAL"
+            className="w-full h-screen object-cover" // Adjusted to h-screen
+          />
+          <div className="lg:absolute lg:bottom-10 lg:left-10 bg-gradient-to-l from-rich-blue to-interstellar-blue text-white p-10 lg:max-w-2xl">
+            <p className="mb-10 font-inter text-5xl font-bold">
+              We crush your competitors, goals, and sales records - without the
+              B.S.
+            </p>
+            <a
+              href="/services"
+              className="bg-yuzu-jam text-white font-inter p-4 rounded shadow-lg hover:bg-purple-600 hover:text-white transition duration-300"
+            >
+              GET FREE CONSULTATION
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className="w-full max-w-6xl">
+            <Services
+              title="Web & Mobile App Development"
+              text="Your web and mobile Apps are pieces of the puzzle to grow your business. We use frameworks which tailor content and engagement methods to respond to different intents shown by your potential customers who interact with your business online."
+              link="/service-two"
+              imgUrl="/imgs/image 2.png"
+              layout="left"
+            />
+          </div>
+          <div className="w-full max-w-5xl">
+            <Services
+              title="Digital Strategy Consulting"
+              text="Your digital strategy should complement the overall marketing strategy of the company. In online marketing, each component will never work in isolation and every business needs a different mix. We provide a clear concept and strategic overview to find the most efficient model for your business."
+              link="/service-two"
+              imgUrl="/imgs/image 1.png"
+              layout="right"
+            />
+          </div>
+          <div className="w-full max-w-6xl mb-10">
+            <FAQ />
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
