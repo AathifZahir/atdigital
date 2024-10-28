@@ -9,13 +9,13 @@ export default function Home() {
     <div className="overflow-hidden">
       <Navbar />
       <div>
-        <div className="relative lg:h-screen">
+        <div className="relative lg:h-screen" id="hero">
           <img
             src="/imgs/Hero image.png"
             alt="AT DIGITAL"
             className="w-full h-auto lg:h-screen object-cover"
           />
-          <div className="lg:absolute lg:bottom-0 lg:left-0 bg-gradient-to-l from-rich-blue to-interstellar-blue text-white p-10 lg:bottom-10 lg:left-10 lg:max-w-2xl">
+          <div className="lg:absolute bottom-0 left-0 bg-gradient-to-l from-rich-blue to-interstellar-blue text-white p-10 lg:bottom-10 lg:left-10 lg:max-w-2xl">
             <p className="mb-10 font-inter text-3xl lg:text-5xl font-bold">
               We crush your competitors, goals, and sales records - without the
               B.S.
@@ -48,7 +48,7 @@ export default function Home() {
               layout="right"
             />
           </div>
-          <div className="w-full max-w-6xl mb-10">
+          <div className="w-full max-w-6xl mb-10 mt-10">
             <FAQ />
           </div>
         </div>

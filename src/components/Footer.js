@@ -2,8 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-bluish-purple text-white p-12 px-24">
-      {" "}
+    <div className="bg-bluish-purple text-white p-12 lg:px-24 sm:px-12 md:px-12 pb-4">
       <div className="md:flex justify-between items-start">
         <div className="mb-8">
           <div className="flex items-center mb-4">
@@ -41,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="mt-8 w-full max-w-xs md:max-w-md lg:max-w-2xl mx-auto" />
+      <hr className="mt-8 w-full max-w-md md:max-w-md lg:max-w-2xl mx-auto h-[0.0600rem] bg-white border-none" />
       <div className="pt-4 flex justify-center space-x-8">
         <a href="/" className="hover:underline font-inter">
           Privacy Policy
