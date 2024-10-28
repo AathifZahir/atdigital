@@ -10,11 +10,10 @@ const Navbar = () => {
           <img
             src="/imgs/Logo.png"
             alt="AT Digital Logo"
-            className="h-auto w-56 ml-12"
+            className="h-auto w-56 lg:ml-12 md:ml-6 sm:ml-0"
           />
         </a>
       </div>
-      {/* Hamburger Menu Icon for md and below */}
       <div className="md:hidden flex items-center">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -22,7 +21,7 @@ const Navbar = () => {
         >
           {isOpen ? (
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -31,29 +30,19 @@ const Navbar = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           ) : (
-            <svg
-              className="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <div className="flex flex-col justify-between h-6">
+              <div className="w-8 h-1 bg-white rounded"></div>
+              <div className="w-8 h-1 bg-white rounded my-1"></div>
+              <div className="w-8 h-1 bg-white rounded"></div>
+            </div>
           )}
         </button>
       </div>
-      {/* Menu Links for larger screens */}
       <div className="hidden md:flex space-x-8 text-sm">
         <a href="/" className="hover:underline font-inter">
           SERVICES
@@ -68,15 +57,17 @@ const Navbar = () => {
           CAREERS
         </a>
       </div>
-      {/* Dropdown Menu for md and below */}
       {isOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col p-4">
+          <div className="absolute font-inter top-4 left-4 text-black ">
+            <a href="/">HOME</a>
+          </div>
           <button
             onClick={() => setIsOpen(false)}
             className="text-black self-end mb-4"
           >
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -85,22 +76,22 @@ const Navbar = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
           <div className="flex flex-col items-start">
-            <a href="/" className="hover:underline font-inter py-2 text-black">
+            <a href="/" className="hover:underline font-inter py-4 text-black">
               SERVICES
             </a>
-            <a href="/" className="hover:underline font-inter py-2 text-black">
+            <a href="/" className="hover:underline font-inter py-4 text-black">
               ABOUT US
             </a>
-            <a href="/" className="hover:underline font-inter py-2 text-black">
+            <a href="/" className="hover:underline font-inter py-4 text-black">
               CONTACT US
             </a>
-            <a href="/" className="hover:underline font-inter py-2 text-black">
+            <a href="/" className="hover:underline font-inter py-4 text-black">
               CAREERS
             </a>
           </div>
