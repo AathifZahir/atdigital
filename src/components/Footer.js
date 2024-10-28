@@ -5,8 +5,8 @@ const Footer = () => {
     <div className="bg-bluish-purple text-white p-12 px-24">
       {" "}
       {/* Increase padding here */}
-      <div className="flex justify-between items-start">
-        <div>
+      <div className="md:flex justify-between items-start">
+        <div className="mb-8">
           <div className="flex items-center mb-4">
             <img
               src="/imgs/Logo.png"
@@ -20,8 +20,8 @@ const Footer = () => {
             business results.
           </p>
         </div>
-        <div className="flex space-x-16">
-          <div>
+        <div className="sm:flex sm:space-x-16">
+          <div className="mb-8 sm:mb-0">
             <h2 className="text-xl font-bold mb-2 font-inter mr-14">
               Our Technologies
             </h2>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="mt-8 w-[630px] flex mx-auto" />
+      <hr className="mt-8 w-full max-w-xs md:max-w-md lg:max-w-2xl mx-auto" />
       <div className="pt-4 flex justify-center space-x-8">
         <a href="/" className="hover:underline font-inter">
           Privacy Policy

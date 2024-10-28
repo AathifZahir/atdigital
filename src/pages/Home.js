@@ -9,14 +9,14 @@ export default function Home() {
     <div className="overflow-hidden">
       <Navbar />
       <div>
-        <div className="lg:relative lg:h-screen">
+        <div className="relative lg:h-screen">
           <img
             src="/imgs/Hero image.png"
             alt="AT DIGITAL"
-            className="w-full h-screen object-cover" // Adjusted to h-screen
+            className="w-full h-auto lg:h-screen object-cover"
           />
-          <div className="lg:absolute lg:bottom-10 lg:left-10 bg-gradient-to-l from-rich-blue to-interstellar-blue text-white p-10 lg:max-w-2xl">
-            <p className="mb-10 font-inter text-5xl font-bold">
+          <div className="lg:absolute lg:bottom-0 lg:left-0 bg-gradient-to-l from-rich-blue to-interstellar-blue text-white p-10 lg:bottom-10 lg:left-10 lg:max-w-2xl">
+            <p className="mb-10 font-inter text-3xl lg:text-5xl font-bold">
               We crush your competitors, goals, and sales records - without the
               B.S.
             </p>
@@ -28,6 +28,7 @@ export default function Home() {
             </a>
           </div>
         </div>
+
         <div className="flex flex-col items-center justify-center">
           <div className="w-full max-w-6xl">
             <Services
