@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <div className="bg-bluish-purple text-white p-12 px-24">
       {" "}
-      {/* Increase padding here */}
       <div className="md:flex justify-between items-start">
         <div className="mb-8">
           <div className="flex items-center mb-4">
