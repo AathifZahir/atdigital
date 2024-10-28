@@ -12,7 +12,7 @@ const Footer = () => {
               className="w-56 h-auto mr-2"
             />
           </div>
-          <p className="max-w-md font-lato">
+          <p className="max-w-md pr-6 font-lato">
             Your goal is our target. Not anything in between. We use online
             marketing platforms and tools to achieve a single objective - your
             business results.

@@ -34,7 +34,6 @@ const FAQ = () => {
       {faqs.map((faq, index) => (
         <div className="mb-4 w-full" key={index}>
           {" "}
-          {/* Move key here */}
           <Accordion title={faq.title} answer={faq.answer} />
         </div>
       ))}
